@@ -188,3 +188,22 @@ D:\Materialy\Na czasie\Semsetr 1\Modelowanie i analiza systemów informatycznych
 D:\Materialy\Na czasie\Semsetr 1\Modelowanie i analiza systemów informatycznych\Projekt\MASI_PRZYKŁAD_PROJEKTU\Uniterm\obj\Debug\Uniterm.csproj.CoreCompileInputs.cache
 D:\Materialy\Na czasie\Semsetr 1\Modelowanie i analiza systemów informatycznych\Projekt\MASI_PRZYKŁAD_PROJEKTU\Uniterm\obj\Debug\Uniterm.exe
 D:\Materialy\Na czasie\Semsetr 1\Modelowanie i analiza systemów informatycznych\Projekt\MASI_PRZYKŁAD_PROJEKTU\Uniterm\obj\Debug\Uniterm.pdb
+D:\MAGISTREKA\Semestr 1\ModelowanieIAnalizaSystemówInformatycznych\Projekt\MASI\MASI\Uniterm\bin\Debug\Uniterm.exe.config
+D:\MAGISTREKA\Semestr 1\ModelowanieIAnalizaSystemówInformatycznych\Projekt\MASI\MASI\Uniterm\bin\Debug\Uniterm.exe
+D:\MAGISTREKA\Semestr 1\ModelowanieIAnalizaSystemówInformatycznych\Projekt\MASI\MASI\Uniterm\bin\Debug\Uniterm.pdb
+D:\MAGISTREKA\Semestr 1\ModelowanieIAnalizaSystemówInformatycznych\Projekt\MASI\MASI\Uniterm\obj\Debug\Uniterm.csprojAssemblyReference.cache
+D:\MAGISTREKA\Semestr 1\ModelowanieIAnalizaSystemówInformatycznych\Projekt\MASI\MASI\Uniterm\obj\Debug\AddElem.baml
+D:\MAGISTREKA\Semestr 1\ModelowanieIAnalizaSystemówInformatycznych\Projekt\MASI\MASI\Uniterm\obj\Debug\AddUniterm.baml
+D:\MAGISTREKA\Semestr 1\ModelowanieIAnalizaSystemówInformatycznych\Projekt\MASI\MASI\Uniterm\obj\Debug\AddElem.g.cs
+D:\MAGISTREKA\Semestr 1\ModelowanieIAnalizaSystemówInformatycznych\Projekt\MASI\MASI\Uniterm\obj\Debug\AddUniterm.g.cs
+D:\MAGISTREKA\Semestr 1\ModelowanieIAnalizaSystemówInformatycznych\Projekt\MASI\MASI\Uniterm\obj\Debug\Window1.g.cs
+D:\MAGISTREKA\Semestr 1\ModelowanieIAnalizaSystemówInformatycznych\Projekt\MASI\MASI\Uniterm\obj\Debug\App.g.cs
+D:\MAGISTREKA\Semestr 1\ModelowanieIAnalizaSystemówInformatycznych\Projekt\MASI\MASI\Uniterm\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\MAGISTREKA\Semestr 1\ModelowanieIAnalizaSystemówInformatycznych\Projekt\MASI\MASI\Uniterm\obj\Debug\Uniterm_MarkupCompile.cache
+D:\MAGISTREKA\Semestr 1\ModelowanieIAnalizaSystemówInformatycznych\Projekt\MASI\MASI\Uniterm\obj\Debug\Uniterm_MarkupCompile.lref
+D:\MAGISTREKA\Semestr 1\ModelowanieIAnalizaSystemówInformatycznych\Projekt\MASI\MASI\Uniterm\obj\Debug\Window1.baml
+D:\MAGISTREKA\Semestr 1\ModelowanieIAnalizaSystemówInformatycznych\Projekt\MASI\MASI\Uniterm\obj\Debug\Uniterm.g.resources
+D:\MAGISTREKA\Semestr 1\ModelowanieIAnalizaSystemówInformatycznych\Projekt\MASI\MASI\Uniterm\obj\Debug\Uniterm.Properties.Resources.resources
+D:\MAGISTREKA\Semestr 1\ModelowanieIAnalizaSystemówInformatycznych\Projekt\MASI\MASI\Uniterm\obj\Debug\Uniterm.csproj.GenerateResource.cache
+D:\MAGISTREKA\Semestr 1\ModelowanieIAnalizaSystemówInformatycznych\Projekt\MASI\MASI\Uniterm\obj\Debug\Uniterm.exe
+D:\MAGISTREKA\Semestr 1\ModelowanieIAnalizaSystemówInformatycznych\Projekt\MASI\MASI\Uniterm\obj\Debug\Uniterm.pdb

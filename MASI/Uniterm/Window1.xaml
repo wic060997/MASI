@@ -25,10 +25,10 @@
 
         <ComboBox Height="23" Name="cbfSize" Width="50" SelectionChanged="ehcbfSizeChanged"  HorizontalAlignment="Right" Margin="0,0,10,77" VerticalAlignment="Bottom" Grid.Column="1" />
         <ComboBox Height="23" Name="cbFonts" Width="120" SelectionChanged="ehCBFontsChanged"  HorizontalAlignment="Right" Margin="0,0,10,108" VerticalAlignment="Bottom" Grid.Column="1" />
-        <Button Height="23" Width="99" Click="Button_Click"  HorizontalAlignment="Right" Margin="0,30,10,0" VerticalAlignment="Top" Name="btnAddSek" Grid.Column="1">Dodaj op. sek.</Button>
+        <Button Height="23" Width="99" Click="Button_Click"  HorizontalAlignment="Right" Margin="0,30,10,0" VerticalAlignment="Top" Name="btnAddSek" Grid.Column="1">Dodaj op. eliminacji</Button>
         <Label Height="28" HorizontalAlignment="Right" Margin="0,0,71,72" Name="label1" VerticalAlignment="Bottom" Width="59" Grid.Column="1">Rozmiar</Label>
         <Label HorizontalAlignment="Right" Margin="0,106,63,131" Name="label2" Width="67" Grid.Column="1">Czcionka</Label>
-        <Button Height="23" HorizontalAlignment="Right" Margin="0,65,10,0" Name="btnAddEl" VerticalAlignment="Top" Width="96" Click="btnAddEl_Click" Grid.Column="1">Dodaj op. ele.</Button>
+        <Button Height="23" HorizontalAlignment="Right" Margin="0,65,10,0" Name="btnAddEl" VerticalAlignment="Top" Width="96" Click="btnAddEl_Click" Grid.Column="1">Dodaj op. zrównoleglenia</Button>
         <Button Height="23" HorizontalAlignment="Right" Margin="0,0,10,29" Name="btnRedraw" VerticalAlignment="Bottom" Width="75" Click="btnRedraw_Click" Grid.Column="1">Przerysuj</Button>
         <ListBox HorizontalAlignment="Left" Margin="0,30,0,35" Name="lbUniterms" Width="127" Grid.RowSpan="2" BorderThickness="3" SelectionChanged="ehlbUNitermsSelectionChanged" />
         <TextBox Grid.Row="1" HorizontalAlignment="Left" Margin="45,0,0,11" Name="tbName" Width="120" Height="19.385" VerticalAlignment="Bottom" />

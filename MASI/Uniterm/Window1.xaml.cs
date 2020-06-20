@@ -141,6 +141,22 @@ namespace Uniterm
             modified = true;
         }
 
+        private void btnEl_Click(object sender, RoutedEventArgs e) {
+            AddElem addElem = new AddElem();
+            addElem.ShowDialog();
+            if (addElem.tbA.Text.Length > 250 || addElem.tbB.Text.Length > 250 || addElem.tbC.Text.Length > 250)
+            {
+                MessageBox.Show("Zbyt długi tekst!\n Maksymalna długość tekstu to 250 znaków!", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            MyDrawing.eA = addElem.tbA.Text;
+            MyDrawing.eB = addElem.tbB.Text;
+            MyDrawing.eC = addElem.tbC.Text;
+
+            btnRedraw_Click(sender, e);
+            modified = true;
+        }
+
         private void btnRedraw_Click(object sender, RoutedEventArgs e)
         {
             cDrawing.ClearAll();

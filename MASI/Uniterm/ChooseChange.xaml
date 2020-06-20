@@ -1,0 +1,23 @@
+﻿<Window x:Class="Uniterm.ChooseChange"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Uniterm"
+        mc:Ignorable="d"
+        Title="ChooseChange" 
+        Height="180" Width="300" 
+        ResizeMode="CanMinimize" 
+        WindowStartupLocation="CenterScreen" 
+        ShowInTaskbar="False">
+    <Grid>
+        <Label Content="Który z operatorów eliminacji zamienić?" VerticalAlignment="Top" Margin="36,28,0,0" HorizontalAlignment="Left"/>
+        <Button Content="Anuluj" HorizontalAlignment="Right" Margin="0,126,10,0" VerticalAlignment="Top" Width="35" Height="15" FontSize="8" FontWeight="Bold" Background="#FFA63939" Click="Button_Click"/>
+        <Label Content="Wyrażenie:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="16,73,0,0"/>
+        <RadioButton Content="A" Name="optionA" IsChecked="True" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="99,61,0,60"/>
+        <RadioButton Content="B" Name="optionB" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="99,84,0,40"/>
+        <RadioButton Content="C" Name="optionC" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="99,103,0,20"/>
+        <Button Content="Zamień" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="161,121,0,0" Click="Button_Click_1"/>
+
+    </Grid>
+</Window>

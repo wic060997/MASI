@@ -195,26 +195,30 @@ namespace Uniterm
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
-
-            char operacja = 'X';
-            
-            switch (MessageBox.Show("Co zamienić?\n [Tak]==A, [Nie]==B", "Zamień", MessageBoxButton.YesNoCancel, MessageBoxImage.Question))
+            ChooseChange choose = new ChooseChange();
+            choose.ShowDialog();
+            if(choose.anuluj != true)
             {
-                case MessageBoxResult.Yes: operacja = 'A';
-                
-                    break;
-                case MessageBoxResult.No: operacja = 'B';
-                
-                    break;
-                case MessageBoxResult.Cancel: return;
+                char oper ='A';
+                if (choose.optionA.IsChecked == true)
+                {
+                    oper = 'A';
+                }
+                if (choose.optionB.IsChecked == true)
+                {
+                    oper = 'B';
+                }
+                if (choose.optionC.IsChecked == true)
+                {
+                    oper = 'C';
+                }
+
+                MyDrawing.oper = oper;
+                btnRedraw_Click(sender, e);
+                modified = true;
             }
-
-            cDrawing.ClearAll();
-            MyDrawing.oper = operacja;
-            btnRedraw_Click(sender, e);
-            modified = true;
+            
         }
-
         private void MenuItem_Click_1(object sender, RoutedEventArgs e)
         {
            // Int32 fontsize_1 = (Int32)MyDrawing.fontsize;

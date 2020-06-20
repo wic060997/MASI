@@ -22,5 +22,10 @@ namespace Uniterm
         {
             InitializeComponent();
         }
+
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }

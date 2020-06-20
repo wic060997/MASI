@@ -207,3 +207,5 @@ D:\MAGISTREKA\Semestr 1\ModelowanieIAnalizaSystemówInformatycznych\Projekt\MASI
 D:\MAGISTREKA\Semestr 1\ModelowanieIAnalizaSystemówInformatycznych\Projekt\MASI\MASI\Uniterm\obj\Debug\Uniterm.csproj.GenerateResource.cache
 D:\MAGISTREKA\Semestr 1\ModelowanieIAnalizaSystemówInformatycznych\Projekt\MASI\MASI\Uniterm\obj\Debug\Uniterm.exe
 D:\MAGISTREKA\Semestr 1\ModelowanieIAnalizaSystemówInformatycznych\Projekt\MASI\MASI\Uniterm\obj\Debug\Uniterm.pdb
+D:\MAGISTREKA\Semestr 1\ModelowanieIAnalizaSystemówInformatycznych\Projekt\MASI\MASI\Uniterm\obj\Debug\AddZrownoleglenie.g.cs
+D:\MAGISTREKA\Semestr 1\ModelowanieIAnalizaSystemówInformatycznych\Projekt\MASI\MASI\Uniterm\obj\Debug\AddZrownoleglenie.baml

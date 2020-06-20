@@ -99,7 +99,7 @@ namespace Uniterm
                 MessageBox.Show(ex.Message);
             }
         }
-
+        /*
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             AddUniterm au = new AddUniterm();
@@ -140,7 +140,7 @@ namespace Uniterm
             btnRedraw_Click(sender, e);
             modified = true;
         }
-
+        */
         private void btnEl_Click(object sender, RoutedEventArgs e) {
             AddElem addElem = new AddElem();
             addElem.ShowDialog();
@@ -154,6 +154,26 @@ namespace Uniterm
             MyDrawing.eC = addElem.tbC.Text;
 
             btnRedraw_Click(sender, e);
+            modified = true;
+        }
+
+        private void btnZrow_Click(object sender,RoutedEventArgs e)
+        {
+            AddZrownoleglenie addZrownoleglenie = new AddZrownoleglenie();
+            addZrownoleglenie.ShowDialog();
+            if (addZrownoleglenie.tbA.Text.Length > 250 || addZrownoleglenie.tbB.Text.Length > 250)
+            {
+                MessageBox.Show("Zbyt długi tekst!\n Maksymalna długość tekstu to 250 znaków!", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            MyDrawing.sA = addZrownoleglenie.tbA.Text;
+            MyDrawing.sB = addZrownoleglenie.tbB.Text;
+
+            MyDrawing.sOp = addZrownoleglenie.rbSr.IsChecked == true ? " ; " : " , ";
+
+            btnRedraw_Click(sender, e);
+
             modified = true;
         }
 

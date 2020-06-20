@@ -167,10 +167,10 @@ namespace Uniterm
                 return;
             }
 
-            MyDrawing.sA = addZrownoleglenie.tbA.Text;
-            MyDrawing.sB = addZrownoleglenie.tbB.Text;
+            MyDrawing.zA = addZrownoleglenie.tbA.Text;
+            MyDrawing.zB = addZrownoleglenie.tbB.Text;
 
-            MyDrawing.sOp = addZrownoleglenie.rbSr.IsChecked == true ? " ; " : " , ";
+            MyDrawing.zOp = ";";
 
             btnRedraw_Click(sender, e);
 
@@ -229,7 +229,7 @@ namespace Uniterm
                 if (nowy)
                 {
                     sql = "insert into uniterms values('" + tbName.Text + "','" + tbDescription.Text + "','" +
-                        MyDrawing.sA + "','" + MyDrawing.sB + "','" + MyDrawing.sOp + "','" + MyDrawing.eA + "','" +
+                        MyDrawing.zA + "','" + MyDrawing.zB + "','" + MyDrawing.zOp + "','" + MyDrawing.eA + "','" +
                         MyDrawing.eB + "','" + MyDrawing.eC + "'," + (Int32) MyDrawing.fontsize  + ",'" + MyDrawing.fontFamily + "','" + MyDrawing.oper + "');";
                 }
                 else
@@ -237,9 +237,9 @@ namespace Uniterm
                     
                     sql = "UPDATE uniterms SET " +
       "description = '" + tbDescription.Text +
-      "',sA = '" + MyDrawing.sA +
-      "',sB ='" + MyDrawing.sB +
-      "',sOp ='" + MyDrawing.sOp +
+      "',zA = '" + MyDrawing.zA +
+      "',zB ='" + MyDrawing.zB +
+      "',zOp ='" + MyDrawing.zOp +
       "',eA = '" + MyDrawing.eA +
       "',eB = '" + MyDrawing.eB +
       "',eC = '" + MyDrawing.eC +
@@ -309,9 +309,9 @@ namespace Uniterm
                     MyDrawing.eB = (string)dr["eB"];
                     MyDrawing.eC = (string)dr["eC"];
 
-                    MyDrawing.sA = (string)dr["sA"];
-                    MyDrawing.sB = (string)dr["sB"];
-                    MyDrawing.sOp = (string)dr["sOp"];
+                    MyDrawing.zA = (string)dr["zA"];
+                    MyDrawing.zB = (string)dr["zB"];
+                    MyDrawing.zOp = (string)dr["zOp"];
 
                     MyDrawing.fontFamily = new FontFamily((string)dr["fontFamily"]);
                     

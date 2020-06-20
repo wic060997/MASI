@@ -30,7 +30,7 @@
         <Label HorizontalAlignment="Right" Margin="0,106,63,131" Name="label2" Width="67" Grid.Column="1">Czcionka</Label>
         <Button Height="23" HorizontalAlignment="Right" Margin="0,65,10,0" Name="btnAddEl" VerticalAlignment="Top" Width="96" Click="btnZrow_Click" Grid.Column="1">Dodaj op. zrównoleglenia</Button>
         <Button Height="23" HorizontalAlignment="Right" Margin="0,0,10,29" Name="btnRedraw" VerticalAlignment="Bottom" Width="75" Click="btnRedraw_Click" Grid.Column="1">Przerysuj</Button>
-        <ListBox HorizontalAlignment="Left" Margin="0,30,0,35" Name="lbUniterms" Width="127" Grid.RowSpan="2" BorderThickness="3" SelectionChanged="ehlbUNitermsSelectionChanged" />
+        <ListBox HorizontalAlignment="Left" Margin="1,35,0,30" Name="lbUniterms" Width="127" Grid.RowSpan="2" BorderThickness="3" SelectionChanged="ehlbUNitermsSelectionChanged" />
         <TextBox Grid.Row="1" HorizontalAlignment="Left" Margin="45,0,0,11" Name="tbName" Width="120" Height="19.385" VerticalAlignment="Bottom" />
         <TextBox Grid.Row="1" Margin="218,0,146,11" Name="tbDescription" KeyUp="tbDescKeyUP" Height="19.385" VerticalAlignment="Bottom" Grid.ColumnSpan="2" />
         <Label Grid.Row="1" HorizontalAlignment="Left" Margin="0,0,0,6" Name="label3" Width="47" Height="24.385" VerticalAlignment="Bottom">Nazwa</Label>

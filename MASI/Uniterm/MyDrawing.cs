@@ -71,11 +71,11 @@ namespace Uniterm
             {
                 if (String.IsNullOrEmpty(eA) != true)
                 {
-                    DrawElim(new Point(30, endPointY + 20));
+                    DrawElim(new Point(30, endPointY + 30));
                 }
                 if (String.IsNullOrEmpty(zA)!=true)
                 {
-                    drawZrow(new Point(30, endPointY + 20));
+                    drawZrow(new Point(30, endPointY + 30));
                 }
             }
         }
@@ -101,11 +101,11 @@ namespace Uniterm
             if (zA == "" || zOp == "") return;
             string text = zA + Environment.NewLine.ToString()
                 + zOp + Environment.NewLine.ToString()
-                + zB + Environment.NewLine.ToString();
+                + zB ;
 
             double len = GetTextHeight(text) + 2;
 
-            DrawText(pt, text);
+            DrawText(new Point(pt.X+2,pt.Y), text);
             DrawVerZrow(pt, (int)len);
         }
 
@@ -126,32 +126,43 @@ namespace Uniterm
 
         public void DrawSwitched(Point pt)
         {
-            if (zA == "" || zOp == "" || eA == "" || eB == "" || eC == "") return;
+            string textZrow = zA + Environment.NewLine.ToString()
+                + zOp + Environment.NewLine.ToString()
+                + zB ;
 
+            int lenght = GetTextHeight(textZrow);
+            zOp = Environment.NewLine.ToString() + zOp + Environment.NewLine.ToString();
 
-            string textElim = eA + Environment.NewLine.ToString() + ";" + Environment.NewLine.ToString() +
-                eB + Environment.NewLine.ToString() +
-                ";" + Environment.NewLine.ToString() + eC;
-
-            int length = GetTextLength(textElim);
-
-            zOp = " " + zOp + " ";
-
-            if (oper == 'A')
+            if(oper == 'A')
             {
-                DrawText(new Point(pt.X + length + (fontsize / 3), pt.Y + 3), zOp + zB);
-                DrawElim(new Point(pt.X + (fontsize / 3), pt.Y + 3));
-                length += GetTextLength(zOp + zB) + (int)(fontsize / 3);
+                drawZrow(new Point(pt.X + 5, pt.Y+3));
+                int lenghtT = GetTextHeight(zA + Environment.NewLine.ToString()
+                + zOp + Environment.NewLine.ToString()
+                + zB );
+
+                DrawText(new Point(pt.X + 5, pt.X + lenghtT +(fontsize/3)+10), ";" + Environment.NewLine.ToString() +
+                eB + Environment.NewLine.ToString() +
+                ";" + Environment.NewLine.ToString() + eC);
+                
+                lenght += GetTextHeight(zA + Environment.NewLine.ToString()
+                + zOp + Environment.NewLine.ToString()
+                + zB) + (int)(fontsize / 3) + 5;
             }
             if (oper == 'B')
             {
-                DrawText(pt, zA + zOp);
-                DrawElim(new Point(pt.X + GetTextLength(zA + zOp) + (fontsize / 3), pt.Y));
-                length += GetTextLength(zA + zOp) + (int)(fontsize / 3);
+                DrawText(new Point(pt.X , pt.Y + 3), eA + Environment.NewLine.ToString() +";" + Environment.NewLine.ToString());
+                //DrawText(new Point(pt.X,pt.Y),)
+                drawZrow(new Point(pt.X + 5, pt.Y + GetTextHeight(zA+Environment.NewLine.ToString()+zOp+2)+(fontsize/3)));
+                lenght += GetTextHeight(zA + Environment.NewLine.ToString() + zB) + (int)(fontsize / 3) + 5;
             }
-            zOp = Convert.ToString(zOp[1]);
-            DrawBezier(pt, length + 5); //+5 poniewaz Kreska tyle zajmuje
+            if (oper == 'C')
+            {
+                DrawText(new Point(pt.X + 3, pt.Y + lenght + (fontsize / 3)), zA + Environment.NewLine.ToString() + zB);
+                drawZrow(new Point(pt.X + 5, pt.Y + (fontsize / 3)));
+                lenght += GetTextHeight(zOp + Environment.NewLine.ToString() + zB) + (int)(fontsize / 3) + 5;
+            }
 
+            DrawVert(pt,lenght + (fontsize / 3)+5);
         }
         #endregion
 

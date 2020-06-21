@@ -141,7 +141,8 @@ namespace Uniterm
             modified = true;
         }
         */
-        private void btnEl_Click(object sender, RoutedEventArgs e) {
+        private void btnEl_Click(object sender, RoutedEventArgs e)
+        {
             AddElem addElem = new AddElem();
             addElem.ShowDialog();
             if (addElem.tbA.Text.Length > 250 || addElem.tbB.Text.Length > 250 || addElem.tbC.Text.Length > 250)
@@ -157,7 +158,7 @@ namespace Uniterm
             modified = true;
         }
 
-        private void btnZrow_Click(object sender,RoutedEventArgs e)
+        private void btnZrow_Click(object sender, RoutedEventArgs e)
         {
             AddZrownoleglenie addZrownoleglenie = new AddZrownoleglenie();
             addZrownoleglenie.ShowDialog();
@@ -197,9 +198,9 @@ namespace Uniterm
         {
             ChooseChange choose = new ChooseChange();
             choose.ShowDialog();
-            if(choose.anuluj != true)
+            if (choose.anuluj != true)
             {
-                char oper ='A';
+                char oper = 'A';
                 if (choose.optionA.IsChecked == true)
                 {
                     oper = 'A';
@@ -217,36 +218,38 @@ namespace Uniterm
                 btnRedraw_Click(sender, e);
                 modified = true;
             }
-            
+
         }
         private void MenuItem_Click_1(object sender, RoutedEventArgs e)
         {
-           // Int32 fontsize_1 = (Int32)MyDrawing.fontsize;
+            // Int32 fontsize_1 = (Int32)MyDrawing.fontsize;
             try
             {
+                string checkSql = $"select * from uniterms where name = '{tbName.Text}'";
+                var row = db.CreateDataRow(checkSql);
 
                 string sql = "insert into uniterms values('{0}','{1}','{2}','{3}','{4}','{5}','{6}',''{7}','{8}',{9},'{10}','{11}');";
-                if (nowy)
+                if (row == null)
                 {
                     sql = "insert into uniterms values('" + tbName.Text + "','" + tbDescription.Text + "','" +
                         MyDrawing.zA + "','" + MyDrawing.zB + "','" + MyDrawing.zOp + "','" + MyDrawing.eA + "','" +
-                        MyDrawing.eB + "','" + MyDrawing.eC + "'," + (Int32) MyDrawing.fontsize  + ",'" + MyDrawing.fontFamily + "','" + MyDrawing.oper + "');";
+                        MyDrawing.eB + "','" + MyDrawing.eC + "'," + (Int32)MyDrawing.fontsize + ",'" + MyDrawing.fontFamily + "','" + MyDrawing.oper + "');";
                 }
                 else
                 {
-                    
+
                     sql = "UPDATE uniterms SET " +
-      "description = '" + tbDescription.Text +
-      "',zA = '" + MyDrawing.zA +
-      "',zB ='" + MyDrawing.zB +
-      "',zOp ='" + MyDrawing.zOp +
-      "',eA = '" + MyDrawing.eA +
-      "',eB = '" + MyDrawing.eB +
-      "',eC = '" + MyDrawing.eC +
-      "',fontSize =" + (Int32)MyDrawing.fontsize +
-      ",fontFamily = '" + MyDrawing.fontFamily +
-      "',switched ='" + MyDrawing.oper +
-        "' WHERE name ='" + tbName.Text + "';"; //C:\SLOWIK\Uniterm\Uniterm\ClassDiagram2.cd
+                         "description = '" + tbDescription.Text +
+                         "',zA = '" + MyDrawing.zA +
+                         "',zB ='" + MyDrawing.zB +
+                         "',zOp ='" + MyDrawing.zOp +
+                         "',eA = '" + MyDrawing.eA +
+                         "',eB = '" + MyDrawing.eB +
+                         "',eC = '" + MyDrawing.eC +
+                         "',fontSize =" + (Int32)MyDrawing.fontsize +
+                         ",fontFamily = '" + MyDrawing.fontFamily +
+                         "',switched ='" + MyDrawing.oper +
+                         "' WHERE name ='" + tbName.Text + "';"; //C:\SLOWIK\Uniterm\Uniterm\ClassDiagram2.cd
                 }
 
                 db.RunQuery(sql);
@@ -263,7 +266,7 @@ namespace Uniterm
             lbUniterms.SelectedValue = tbName.Text;
             lbUniterms.SelectionChanged += ehlbUNitermsSelectionChanged;
 
-          
+
         }
 
         private bool CheckSave()
@@ -314,7 +317,7 @@ namespace Uniterm
                     MyDrawing.zOp = (string)dr["zOp"];
 
                     MyDrawing.fontFamily = new FontFamily((string)dr["fontFamily"]);
-                    
+
                     MyDrawing.fontsize = (Int32)dr["fontSize"];
 
                     MyDrawing.oper = ((string)dr["switched"])[0]; ;

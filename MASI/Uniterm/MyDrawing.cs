@@ -62,7 +62,7 @@ namespace Uniterm
 
         public void Redraw()
         {
-            if (oper != ' ')          
+            if (oper != ' ')
             {
                 endPointY = 0;
                 DrawSwitched(new Point(20, endPointY + 30));
@@ -73,7 +73,7 @@ namespace Uniterm
                 {
                     DrawElim(new Point(30, endPointY + 30));
                 }
-                if (String.IsNullOrEmpty(zA)!=true)
+                if (String.IsNullOrEmpty(zA) != true)
                 {
                     drawZrow(new Point(30, endPointY + 30));
                 }
@@ -101,11 +101,11 @@ namespace Uniterm
             if (zA == "" || zOp == "") return;
             string text = zA + Environment.NewLine.ToString()
                 + zOp + Environment.NewLine.ToString()
-                + zB ;
+                + zB;
 
             double len = GetTextHeight(text) + 2;
 
-            DrawText(new Point(pt.X+2,pt.Y), text);
+            DrawText(new Point(pt.X + 2, pt.Y), text);
             DrawVerZrow(pt, (int)len);
         }
 
@@ -120,7 +120,7 @@ namespace Uniterm
 
             double l = GetTextHeight(text) + 2;
 
-            DrawText(p2 ,text);
+            DrawText(p2, text);
             DrawVert(pt, (int)l);
         }
 
@@ -128,41 +128,50 @@ namespace Uniterm
         {
             string textZrow = zA + Environment.NewLine.ToString()
                 + zOp + Environment.NewLine.ToString()
-                + zB ;
+                + zB;
 
             int lenght = GetTextHeight(textZrow);
-            zOp = Environment.NewLine.ToString() + zOp + Environment.NewLine.ToString();
 
-            if(oper == 'A')
+            if (oper == 'A')
             {
-                drawZrow(new Point(pt.X + 5, pt.Y+3));
+                drawZrow(new Point(pt.X + 5, pt.Y + 3));
                 int lenghtT = GetTextHeight(zA + Environment.NewLine.ToString()
                 + zOp + Environment.NewLine.ToString()
-                + zB );
+                + zB);
 
-                DrawText(new Point(pt.X + 5, pt.X + lenghtT +(fontsize/3)+10), ";" + Environment.NewLine.ToString() +
+                DrawText(new Point(pt.X + 5, pt.X + lenghtT + (fontsize / 3) + 10), ";" + Environment.NewLine.ToString() +
                 eB + Environment.NewLine.ToString() +
                 ";" + Environment.NewLine.ToString() + eC);
-                
+
                 lenght += GetTextHeight(zA + Environment.NewLine.ToString()
                 + zOp + Environment.NewLine.ToString()
-                + zB) + (int)(fontsize / 3) + 5;
+                + zB) + (int)(fontsize / 3) * 5-5;
             }
             if (oper == 'B')
             {
-                DrawText(new Point(pt.X , pt.Y + 3), eA + Environment.NewLine.ToString() +";" + Environment.NewLine.ToString());
-                //DrawText(new Point(pt.X,pt.Y),)
-                drawZrow(new Point(pt.X + 5, pt.Y + GetTextHeight(zA+Environment.NewLine.ToString()+zOp+2)+(fontsize/3)));
-                lenght += GetTextHeight(zA + Environment.NewLine.ToString() + zB) + (int)(fontsize / 3) + 5;
+                DrawText(new Point(pt.X + 5, pt.Y), eA + Environment.NewLine.ToString() + ";");
+                drawZrow(new Point(pt.X + 5, pt.Y + GetTextHeight(eA + Environment.NewLine.ToString() + ";") + (fontsize / 3)));
+
+                lenght += GetTextHeight(zA + Environment.NewLine.ToString()
+                    + zOp + Environment.NewLine.ToString()
+                    + zB) + (int)(fontsize / 3) * 5-5;
+
+                int dl = GetTextHeight(eA + Environment.NewLine.ToString() + ";") + (fontsize / 3) + GetTextHeight(zA + Environment.NewLine.ToString()
+                    + zOp + Environment.NewLine.ToString()
+                    + zB);
+                DrawText(new Point(pt.X + 5, pt.Y + dl), ";" + Environment.NewLine.ToString() + eC);
             }
             if (oper == 'C')
             {
-                DrawText(new Point(pt.X + 3, pt.Y + lenght + (fontsize / 3)), zA + Environment.NewLine.ToString() + zB);
-                drawZrow(new Point(pt.X + 5, pt.Y + (fontsize / 3)));
-                lenght += GetTextHeight(zOp + Environment.NewLine.ToString() + zB) + (int)(fontsize / 3) + 5;
+                DrawText(new Point(pt.X + 5, pt.Y), eA + Environment.NewLine.ToString() + ";" + Environment.NewLine.ToString() + eB + Environment.NewLine.ToString() + ";");
+                int dl = GetTextHeight(eA + Environment.NewLine.ToString() + ";" + Environment.NewLine.ToString() + eB + Environment.NewLine.ToString() + ";");
+                drawZrow(new Point(pt.X + 5, pt.Y + dl + (fontsize / 3)));
+                lenght += GetTextHeight(zA + Environment.NewLine.ToString()
+                    + zOp + Environment.NewLine.ToString()
+                    + zB) + (int)(fontsize / 3) * 5;
             }
 
-            DrawVert(pt,lenght + (fontsize / 3)+5);
+            DrawVert(pt, lenght + (fontsize / 3) + 5);
         }
         #endregion
 
@@ -190,9 +199,9 @@ namespace Uniterm
             dc.DrawLine(pen, new Point(pt.X, pt.Y), new Point(pt.X, pt.Y + lenght));
 
             //linia pozioma gorna
-            dc.DrawLine(pen, new Point(pt.X, pt.Y), new Point(pt.X+b, pt.Y));
+            dc.DrawLine(pen, new Point(pt.X, pt.Y), new Point(pt.X + b, pt.Y));
             //linia pozioma dolna
-            dc.DrawLine(pen, new Point(pt.X, pt.Y+lenght), new Point(pt.X+b, pt.Y + lenght));
+            dc.DrawLine(pen, new Point(pt.X, pt.Y + lenght), new Point(pt.X + b, pt.Y + lenght));
 
             endPointY = endPointY + (int)pt.Y + lenght;
         }

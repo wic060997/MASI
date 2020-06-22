@@ -1,16 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Uniterm
 {
@@ -146,7 +137,7 @@ namespace Uniterm
 
                 lenght += GetTextHeight(zA + Environment.NewLine.ToString()
                 + zOp + Environment.NewLine.ToString()
-                + zB) + (int)(fontsize / 3) * 5-5;
+                + zB) + (int)(fontsize / 3) * 5 - 5;
             }
             if (oper == 'B')
             {
@@ -155,7 +146,7 @@ namespace Uniterm
 
                 lenght += GetTextHeight(zA + Environment.NewLine.ToString()
                     + zOp + Environment.NewLine.ToString()
-                    + zB) + (int)(fontsize / 3) * 5-5;
+                    + zB) + (int)(fontsize / 3) * 5 - 5;
 
                 int dl = GetTextHeight(eA + Environment.NewLine.ToString() + ";") + (fontsize / 3) + GetTextHeight(zA + Environment.NewLine.ToString()
                     + zOp + Environment.NewLine.ToString()

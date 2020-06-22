@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Data;
-using System.Data.Sql;
 using System.Data.SqlClient;
-using System.Data.SqlTypes;
 //using System.Data.SqlServerCe;
 
 
@@ -77,6 +72,14 @@ namespace Uniterm
             set
             {
                 this.conString = value;
+            }
+        }
+
+        public App App
+        {
+            get => default;
+            set
+            {
             }
         }
 

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Windows;
+﻿using System.Windows;
 
 namespace Uniterm
 {
@@ -12,5 +7,12 @@ namespace Uniterm
     /// </summary>
     public partial class App : Application
     {
+        public Window1 Window1
+        {
+            get => default;
+            set
+            {
+            }
+        }
     }
 }

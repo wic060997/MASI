@@ -1,21 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.Data;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using System.Data;
-using System.Windows.Markup;
-using System.Xml.Serialization;
-using System.Xml;
-using System.IO;
 
 namespace Uniterm
 {
@@ -29,8 +17,26 @@ namespace Uniterm
             InitializeComponent();
         }
 
+        public MyDrawing MyDrawing
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public MyCanvas MyCanvas
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         DataBase db;
+#pragma warning disable CS0414 // The field 'Window1.nowy' is assigned but its value is never used
         bool nowy = false, modified = false;
+#pragma warning restore CS0414 // The field 'Window1.nowy' is assigned but its value is never used
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
             cDrawing.ClearAll();
@@ -305,7 +311,7 @@ namespace Uniterm
                 DataRow dr;
                 try
                 {
-                    dr = db.CreateDataRow(String.Format("select * from uniterms where name = '{0}';", lbUniterms.SelectedItem.ToString()));
+                    dr = db.CreateDataRow(String.Format($"select * from uniterms where name = '{lbUniterms.SelectedItem.ToString()}';"));
 
 
                     MyDrawing.eA = (string)dr["eA"];

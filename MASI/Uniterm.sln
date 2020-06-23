@@ -1,7 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uniterm", "Uniterm\Uniterm.csproj", "{826F4E20-6E2B-42DB-9BFC-94FFFCBAF194}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestyJednostkowe", "TestyJednostkowe\TestyJednostkowe.csproj", "{4FEE2E1A-386B-4BFC-B3E3-E13D6D592C64}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,8 +17,15 @@ Global
 		{826F4E20-6E2B-42DB-9BFC-94FFFCBAF194}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{826F4E20-6E2B-42DB-9BFC-94FFFCBAF194}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{826F4E20-6E2B-42DB-9BFC-94FFFCBAF194}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FEE2E1A-386B-4BFC-B3E3-E13D6D592C64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FEE2E1A-386B-4BFC-B3E3-E13D6D592C64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FEE2E1A-386B-4BFC-B3E3-E13D6D592C64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FEE2E1A-386B-4BFC-B3E3-E13D6D592C64}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6C1A85E6-D965-425E-AB77-EBF5654818B9}
 	EndGlobalSection
 EndGlobal

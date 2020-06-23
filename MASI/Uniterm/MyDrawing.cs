@@ -88,9 +88,13 @@ namespace Uniterm
         }
         */
 
-        public void drawZrow(Point pt)
+        public bool drawZrow(Point pt)
         {
-            if (zA == "" || zOp == "") return;
+            if (zA == null || zOp == null) return false;
+            if (zA == "" || zOp == "") return false;
+
+            int h = GetTextHeight("test");
+
             string text = zA + Environment.NewLine.ToString()
                 + zOp + Environment.NewLine.ToString()
                 + zB;
@@ -99,11 +103,13 @@ namespace Uniterm
 
             DrawText(new Point(pt.X + 2, pt.Y), text);
             DrawVerZrow(pt, (int)len);
+            return true;
         }
 
-        public void DrawElim(Point pt)
+        public bool DrawElim(Point pt)
         {
-            if (eA == "" || eB == "" || eC == "") return;
+            if (eA == null || eB == null || eC == null ) return false;
+            if (eA == "" || eB == "" || eC == "") return false;
 
             Point p2 = new Point(pt.X + 2, pt.Y);
             string text = eA + Environment.NewLine.ToString() + ";" + Environment.NewLine.ToString() +
@@ -114,6 +120,8 @@ namespace Uniterm
 
             DrawText(p2, text);
             DrawVert(pt, (int)l);
+
+            return true;
         }
 
         public void DrawSwitched(Point pt)
@@ -226,7 +234,7 @@ namespace Uniterm
             dc.DrawText(GetFormattedText(text), point);
         }
 
-        private int GetTextHeight(string text)
+        public int GetTextHeight(string text)
         {
             return (int)GetFormattedText(text).Height;
         }

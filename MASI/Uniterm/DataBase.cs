@@ -6,7 +6,7 @@ using System.Data.SqlClient;
 
 namespace Uniterm
 {
-    class DataBase
+    public class DataBase
     {
         #region Variables
 
@@ -87,11 +87,12 @@ namespace Uniterm
 
         #region Methods
 
-        public void Connect()
+        public bool Connect()
         {
             try
             {
                 this.conString.Open();
+                return true;
             }
             catch (InvalidCastException ex)
             {

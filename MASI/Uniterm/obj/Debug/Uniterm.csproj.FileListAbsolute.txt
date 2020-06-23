@@ -210,4 +210,5 @@ D:\MAGISTREKA\Semestr 1\ModelowanieIAnalizaSystemówInformatycznych\Projekt\MASI
 D:\MAGISTREKA\Semestr 1\ModelowanieIAnalizaSystemówInformatycznych\Projekt\MASI\MASI\Uniterm\obj\Debug\ChooseChange.baml
 D:\MAGISTREKA\Semestr 1\ModelowanieIAnalizaSystemówInformatycznych\Projekt\MASI\MASI\Uniterm\bin\Debug\Uniterm.exe.CodeAnalysisLog.xml
 D:\MAGISTREKA\Semestr 1\ModelowanieIAnalizaSystemówInformatycznych\Projekt\MASI\MASI\Uniterm\bin\Debug\Uniterm.exe.lastcodeanalysissucceeded
-D:\MAGISTREKA\Semestr 1\ModelowanieIAnalizaSystemówInformatycznych\Projekt\MASI\MASI\Uniterm\obj\Debug\Uniterm.csprojResolveAssemblyReference.cache
+D:\MAGISTREKA\Semestr 1\ModelowanieIAnalizaSystemówInformatycznych\Projekt\MASI\MASI\Uniterm\obj\Debug\Uniterm.csprojAssemblyReference.cache
+D:\MAGISTREKA\Semestr 1\ModelowanieIAnalizaSystemówInformatycznych\Projekt\MASI\MASI\Uniterm\obj\Debug\Uniterm.csproj.CoreCompileInputs.cache
